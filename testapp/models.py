@@ -8,4 +8,4 @@ class MyModel(models.Model):
     field2 = models.CharField(max_length=100)
 
     def __str__(self):
-        return f"<Model: {self.field1}, {self.field2}"
+        return f"<Model: {self.field1}, {self.field2}>"
