@@ -1,6 +1,8 @@
 from django import forms
+from .models import MyModel
 
 
-class MyModelForm(forms.Form):
-    field1 = forms.CharField(label='Field1', max_length=100)
-    field2 = forms.CharField(label='Field2', max_length=100)
+class MyModelForm(forms.ModelForm):
+    class Meta:
+        model = MyModel
+        fields = ['field1', 'field2']
