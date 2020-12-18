@@ -19,5 +19,5 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='first_model')
+    path('index', views.index1, name='first_model')
 ]
