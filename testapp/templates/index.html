@@ -1,7 +1,18 @@
+<div >
+   <h4 > Welcome {{ user.first_name }} {{ user.last_name }} </h4>
+</div>
+
 {% for obj in data %}
-    <li> {{ obj.field1 }} </li>
-    <li> {{ obj.field2 }} </li>
-    <li> {{ obj.field3 }} </li>
-    <li> {{ obj.created }} </li>
-    <li> {{ obj.location }} </li>
+    <ul>
+        <li> {{ obj.author }} </li>
+        <li> {{ obj.field1 }} </li>
+        <li> {{ obj.field2 }} </li>
+        <li> {{ obj.field3 }} </li>
+        <li> {{ obj.created }} </li>
+        <li> {{ obj.location }} </li>
+    </ul>
 {% endfor %}
+
+<button>
+    <a href="{% url 'logout' %}">Logout</a>
+</button>
