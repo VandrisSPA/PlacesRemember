@@ -24,7 +24,7 @@ def index1(request):
 
         if form.is_valid():
             form.save()
-            context = {'data': MyModel.objects.all()}
+            context = {'data': MyModel.objects.all().filter(author=request.user)}
             return render(request, 'index.html', context)
     else:
         form = MyModelForm()
