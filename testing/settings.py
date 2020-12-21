@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g+=a5p5xiv@&u%0dl6kju_$9jprj-dis&-9e+l&w$87dsmhhip'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://places-remember-666.herokuapp.com',
+ALLOWED_HOSTS = ['places-remember-666.herokuapp.com',
                  '127.0.0.1',
                  'localhost',
                  '0.0.0.0']
@@ -107,11 +107,11 @@ WSGI_APPLICATION = 'testing.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'HOST': 'localhost',
+        'HOST': 'ec2-54-76-215-139.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'NAME': 'postgres'
+        'USER': 'sjjzhjbjriznxr',
+        'PASSWORD': 'ccc4795246364efc364692bb73e37a2e0abf96c9d24cd8af85de7499ada897ac',
+        'NAME': 'dc5h7a8sra4ig5'
     }
 }
 
