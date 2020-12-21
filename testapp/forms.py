@@ -6,5 +6,5 @@ from .models import MyModel
 class MyModelForm(geoforms.Form, forms.ModelForm):
     class Meta:
         model = MyModel
-        fields = ['field1', 'field2', 'field3', 'location']
+        fields = ['feelings', 'location']
         widgets = {'location': geoforms.OSMWidget(attrs={'map_width': 800, 'map_height': 500})}
