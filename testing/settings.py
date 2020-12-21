@@ -25,7 +25,7 @@ SECRET_KEY = 'g+=a5p5xiv@&u%0dl6kju_$9jprj-dis&-9e+l&w$87dsmhhip'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.88.248',
+ALLOWED_HOSTS = ['https://places-remember-666.herokuapp.com',
                  '127.0.0.1',
                  'localhost',
                  '0.0.0.0']
