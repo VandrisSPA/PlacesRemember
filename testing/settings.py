@@ -42,8 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social_django',
+    'crispy_forms',
     'testapp'
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4 '
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.instagram.InstagramOAuth2',
