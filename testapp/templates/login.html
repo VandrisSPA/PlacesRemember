@@ -1,3 +1,7 @@
-    <button>
-        <a href="{% url "social:begin" "google-oauth2" %}">Login with Google</a>
-    </button>
+{% extends 'base.html' %}
+
+{% block button %}
+    <form class="d-flex">
+        <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Login with Google</a>
+    </form>
+{% endblock %}

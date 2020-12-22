@@ -1,19 +1,43 @@
-<div >
-   <h4 > Welcome {{ user.first_name }} {{ user.last_name }} </h4>
-</div>
+{% extends 'base.html' %}
 
-<button>
-    <a href="{% url 'first_model' %}">Add one more</a>
-</button>
+{% block button %}
+    <form class="d-flex">
+        <div class="d-grid gap-2 d-md-block">
+            <a class="btn btn-primary" href="{% url 'first_model' %}" role="button">Add one more</a>
+            <a class="btn btn-primary" href="{% url 'logout' %}" role="button">Logout</a>
+        </div>
+    </form>
+{% endblock %}
 
-{% for obj in data %}
-    <ul>
-        <li> {{ obj.feelings }} </li>
-        <li> {{ obj.created }} </li>
-        <li> {{ obj.location }} </li>
-    </ul>
-{% endfor %}
+{% block content %}
+    <div >
+       <h4> Welcome {{ user.first_name }} {{ user.last_name }} </h4>
+    </div>
 
-<button>
-    <a href="{% url 'logout' %}">Logout</a>
-</button>
+    {% if data %}
+        <table class="table table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Feeling</th>
+              <th scope="col">Location</th>
+              <th scope="col">Created</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for obj in data %}
+                <tr>
+                  <td> {{ obj.feelings }} </td>
+                  <td> {{ obj.location }} </td>
+                  <td> {{ obj.created }} </td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+    {% else %}
+        <div >
+            <h4> Sorry, but you don't have any beautiful places remember ... Maybe, any add? </h4>
+        </div>
+    {% endif %}
+
+{% endblock %}

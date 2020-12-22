@@ -1,15 +1,14 @@
-<html>
-    <head>
-        {{ form.media }}
-    </head>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
-    <body>
-        <div id="map">
-            <form enctype="multipart/form-data" method="post" action="">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" value="Submit"/>
-            </form>
+{% block content %}
+<div id="map">
+    <form class="form" enctype="multipart/form-data" method="post" action="">
+        <div class='row'>
+            {% csrf_token %}
+            {{ form }}
         </div>
-    </body>
-</html>
+        <input type="submit" class="btn btn-primary" value="Submit"/>
+    </form>
+</div>
+{% endblock %}
