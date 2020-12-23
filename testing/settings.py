@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'testapp'
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4 '
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.instagram.InstagramOAuth2',
