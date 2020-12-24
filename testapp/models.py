@@ -6,7 +6,8 @@ from django.conf import settings
 
 class MyModel(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    feelings = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, default='')
+    feelings = models.CharField(max_length=100, default='')
     location = g_models.PointField()
 
     created = models.DateTimeField(auto_now=True)

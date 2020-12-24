@@ -73,6 +73,19 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = [
     ('link', 'profile'),
 ]
 
+SOCIAL_AUTH_FACEBOOK_KEY = '288510879225719'        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '25de8831c2fb90724764363e8222fe08'  # App Secret
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'profile'] # add this
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
+  'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [                 # add this
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile'),
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

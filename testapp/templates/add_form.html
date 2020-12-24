@@ -3,12 +3,12 @@
 
 {% block content %}
 <div id="map">
-    <form class="form" enctype="multipart/form-data" method="post" action="">
-        <div class='row'>
+    <form class="form row gy-2 gx-3 align-items-center" enctype="multipart/form-data" method="post" action="">
+        <div class="mb-3 col-auto" style="margin: 0 auto !important;">
             {% csrf_token %}
             {{ form|crispy }}
+            <input type="submit" class="btn btn-primary" value="Submit"/>
         </div>
-        <input type="submit" class="btn btn-primary" value="Submit"/>
     </form>
 </div>
 {% endblock %}
