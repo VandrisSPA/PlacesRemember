@@ -8,7 +8,7 @@
 
 {% block content %}
     <div class="d-grid gap-2 col-4 mx-auto">
-        <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Login with Google</a>
+        <a class="btn btn-danger" href="{% url 'social:begin' 'google-oauth2' %}" role="button">Login with Google</a>
         <a class="btn btn-primary" href="{% url 'social:begin' 'facebook' %}" role="button">Login with FaceBook</a>
     </div>
 {% endblock %}

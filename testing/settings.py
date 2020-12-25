@@ -73,8 +73,8 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_EXTRA_DATA = [
     ('link', 'profile'),
 ]
 
-SOCIAL_AUTH_FACEBOOK_KEY = '288510879225719'        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '25de8831c2fb90724764363e8222fe08'  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = '391443901914007'        # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '015a51a857286975d21c06af3e12061d'  # App Secret
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'profile'] # add this
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
   'fields': 'id, name, email, picture.type(large), link'
